@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (PlayerInput.Instance.isJumpButtonPressed)
+        if (Input.GetKeyDown(PlayerInput.Instance.jumpButton))
         {
             if (isGrounded)
             {

@@ -7,7 +7,12 @@ public class PlayerInput : MonoBehaviour
     public static PlayerInput Instance { get; private set; }
     public float horizontalInput { get; private set; }
     public float verticalInput { get; private set; }
-    public bool isJumpButtonPressed { get; private set; }
+
+    [field: SerializeField]
+    public KeyCode jumpButton { get; private set; }
+    [field: SerializeField]
+    public KeyCode restartButton { get; private set; }
+
 
     private void Awake()
     {
@@ -17,6 +22,5 @@ public class PlayerInput : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
-        isJumpButtonPressed = Input.GetKeyDown(KeyCode.Space);
     }
 }
