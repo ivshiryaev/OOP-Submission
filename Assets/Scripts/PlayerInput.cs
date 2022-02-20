@@ -13,6 +13,9 @@ public class PlayerInput : MonoBehaviour
     [field: SerializeField]
     public KeyCode restartButton { get; private set; }
 
+    [field: SerializeField]
+    public KeyCode stopGameButton { get; private set; }
+
 
     private void Awake()
     {
